@@ -12,6 +12,8 @@
 | Owners                            | domaindrivendev                                                                       | RicoSuter                                                                             | Doesn't seem like either repo allows any other users to have admin rights.                                                                             |
 | Sponsorship                       | No sponsorship is labeled.                                                            | Sponsors are clearly labeled.                                                         | NSwag clearly has sponsorship which gives the creator incentive to continue to support it.                                                             |
 
+Stats true as of 12/01/2024.
+
 ### Default JSON
 
 Swashbuckle:
