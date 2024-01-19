@@ -14,6 +14,12 @@
 
 Stats true as of 12/01/2024.
 
+### Feature comparison
+
+| Feature               | Swashbuckle | NSwag |
+|-----------------------|-------------|-------|
+| Supports Minimal APIs | ✔           | ✔     |
+
 ### Default JSON
 
 Swashbuckle:
@@ -163,3 +169,9 @@ NSwag:
   }
 }
 ```
+
+## Questions
+
+- comprehensive list of features?
+- how to remap types?
+- supports open generic types?
