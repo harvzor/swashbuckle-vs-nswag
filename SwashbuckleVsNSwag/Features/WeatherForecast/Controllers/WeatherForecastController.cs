@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SwashbuckleVsNSwag.DTOs;
-using SwashbuckleVsNSwag.Services;
+using SwashbuckleVsNSwag.Features.WeatherForecast.DTOs;
+using SwashbuckleVsNSwag.Features.WeatherForecast.Services;
 
-namespace SwashbuckleVsNSwag.Controllers;
+namespace SwashbuckleVsNSwag.Features.WeatherForecast.Controllers;
 
 [ApiController]
 [Route("[controller]")]

@@ -1,8 +1,10 @@
-﻿namespace SwashbuckleVsNSwag.DTOs;
+﻿namespace SwashbuckleVsNSwag.Features.WeatherForecast.DTOs;
 
 public class WeatherForecastDto
 {
     public DateTime Date { get; set; }
+    
+    public TimeSpan Offset { get; set; }
 
     public int TemperatureC { get; set; }
 

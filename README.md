@@ -5,7 +5,7 @@
 | GitHub                            | https://github.com/domaindrivendev/Swashbuckle.AspNetCore                             | https://github.com/RicoSuter/NSwag                                                    |                                                                                                                                                        |
 | GitHub Stars                      | 5k                                                                                    | 6.3k                                                                                  | Comparing stars is not fair as NSwag has more functionality than Swashbuckle, so perhaps people are starring different specific things.                |
 | NuGet                             | https://www.nuget.org/packages/swashbuckle.aspnetcore/                                | https://www.nuget.org/packages/NSwag.AspNetCore/                                      |                                                                                                                                                        |
-| NuGet downloads (per day average) | 172.1k                                                                                | 18.1k                                                                                 | Swashbuckle is over 9x more popular.                                                                                                                   |
+| NuGet downloads (per day average) | 172.1k                                                                                | 18.1k                                                                                 | Swashbuckle has 9x more downloads.                                                                                                                     |
 | Swagger UI version shipped        | v4.15.5, Wed, 09 Nov 2022 06:53:00                                                    | v5.7.2, Mon, 18 Sep 2023 07:42:57                                                     | Used `JSON.stringify(versions)` in console to find the version. Swagger UI could be swapped out for a more recent version regardless of the generator. |
 | OpenApi version                   | [v3.0.1, Dec 7 2017](https://github.com/OAI/OpenAPI-Specification/releases/tag/3.0.1) | [3.0.0, Jul 26 2017](https://github.com/OAI/OpenAPI-Specification/releases/tag/3.0.0) | [Latest is v3.1.0, Feb 16 2021](https://spec.openapis.org/oas/latest.html).                                                                            |
 | GitHub commits (2023)             | 1                                                                                     | ~97                                                                                   |                                                                                                                                                        |
@@ -170,8 +170,30 @@ NSwag:
 }
 ```
 
+## Remapping types
+
+Swashbuckle:
+
+```csharp
+options.MapType<TimeSpan>(() => new OpenApiSchema
+{
+    Type = "string",
+    Example = new OpenApiString("00:00:00")
+});
+```
+
+NSwag:
+
+```csharp
+configure.SchemaSettings.TypeMappers.Add(new PrimitiveTypeMapper(typeof(TimeSpan), schema =>
+{
+    schema.Format = "string";
+    schema.Type = JsonObjectType.String;
+    schema.Example = "00:00:00";
+}));
+```
+
 ## Questions
 
 - comprehensive list of features?
-- how to remap types?
 - supports open generic types?

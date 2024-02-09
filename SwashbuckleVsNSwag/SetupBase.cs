@@ -1,5 +1,7 @@
-﻿using SwashbuckleVsNSwag.Controllers;
-using SwashbuckleVsNSwag.Services;
+﻿using SwashbuckleVsNSwag.Features.ToDoList.Controllers;
+using SwashbuckleVsNSwag.Features.ToDoList.Services;
+using SwashbuckleVsNSwag.Features.WeatherForecast.Controllers;
+using SwashbuckleVsNSwag.Features.WeatherForecast.Services;
 
 namespace SwashbuckleVsNSwag;
 
@@ -13,6 +15,7 @@ public static class SetupBase
         services.AddEndpointsApiExplorer();
 
         services.AddScoped<WeatherForecastService>();
+        services.AddSingleton<ToDoListService>();
 
         return services;
     }
@@ -27,6 +30,7 @@ public static class SetupBase
         app.MapControllers();
 
         app.MapWeatherForecastMinimalApi();
+        app.MapToDoListMinimalApi();
 
         return app;
     }
