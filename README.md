@@ -26,7 +26,9 @@ Stats true as of 12/01/2024.
 
 ### Default JSON
 
-Swashbuckle:
+<details>
+
+<summary>Swashbuckle:</summary>
 
 ```json
 {
@@ -105,7 +107,11 @@ Swashbuckle:
 }
 ```
 
-NSwag:
+</details>
+
+<details>
+
+<summary>NSwag:</summary>
 
 ```json
 {
@@ -173,6 +179,8 @@ NSwag:
   }
 }
 ```
+
+</details>
 
 ## Remapping types
 
