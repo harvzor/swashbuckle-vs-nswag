@@ -27,6 +27,17 @@ public static class SetupNSwag
                 schema.Type = JsonObjectType.String;
                 schema.Example = "00:00:00";
             }));
+            
+            // Checking if open generics are supported:
+            // configure.SchemaSettings.TypeMappers.Add(new PrimitiveTypeMapper(typeof(Optional<>), schema =>
+            // {
+            //     // I need to know what type is currently being mapped so I can dynamically return the schema.
+            //     // e.g., if the type is `Optional<string>`, return a string
+            //     
+            //     schema.Format = "string";
+            //     schema.Type = JsonObjectType.String;
+            //     schema.IsNullableRaw = true;
+            // }));
         });
         // services.AddSwaggerDocument(); // add Swagger v2 document
 

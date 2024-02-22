@@ -8,6 +8,8 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="Harvzor.Optional" Version="0.0.6" />
+      <PackageReference Include="Harvzor.Optional.SystemTextJson" Version="0.0.6" />
       <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.0" />
     </ItemGroup>
 
